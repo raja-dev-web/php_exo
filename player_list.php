@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-$equipe = array(
+    $equipe = array(
     "Gardien"=> array('Hugo Lloris','Steve Mandanda',' Mike Maignan'),
     "Defenseurs"=> array('Benjamin Pavard','Léo Dubois','Raphael Varane', 'Kurt Zouma', 'Presnel Kimpembe', 'Clément Lenglet', 'Lucas Hernandez', 'Lucas Digne','Jules Koundé'),
     "Milieux" => array("N'Golo Kanté", 'Paul Pogba','Adrien Rabiot', 'Corentin Tolisso', 'Moussa Sissoko', 'Thomas Lemar'),
@@ -16,10 +16,12 @@ $equipe = array(
     );  
     if (isset($_POST["Gardien"])) 
     {
-        // $gardien = $_POST["Gardien"];
     ?>
     <ul>
         <?php
+        // echo $equipe[$gardien];
+        // $joueurs = $equipe[$gardien];
+        // echo $joueurs;
             foreach ($equipe as $key => $value) {
                 if($key == "Gardien")
                 {

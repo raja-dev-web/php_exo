@@ -1,14 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
-    echo $_GET["poste"];
+<?php
+require "playerslist.php";
+if(isset($_GET['poste']))
+{
+    $types = htmlspecialchars($_GET['poste']);
 ?>
-</body>
-</html>
+    <h1>Liste des equipe <?php echo $types; ?> France 2021</h1>
+<?php
+    
+    if (isset($equipe[$types])) 
+    {
+        $playerslists = $equipe[$types];
+?>
+    <ul>
+<?php
+    foreach ($playerslists as $players) 
+    {
+        echo "<li>".$players."</li>";
+    }
+?>
+    </ul>
+<?php
+    }
+    else 
+    {
+        echo "This post is not exists.";
+    }
+}
+else 
+{
+    echo "No post choosed";
+}
+?>
