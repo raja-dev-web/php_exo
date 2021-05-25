@@ -11,6 +11,11 @@
     <table>
         <tbody>
             <tr>
+                <td colspan="2">
+                    <h1 style="text-align: center;">CREATE YOUR PROFILE</h1>
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <label for="prenom">Prenom :</label>
                 </td>
@@ -32,7 +37,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td colspan="2" style="text-align: center;">
                     <input type="submit" name="Valider"/>
                 </td>
             </tr>
