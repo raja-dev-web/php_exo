@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-<form action="exception.php" method="post" enctype="multipart/form-data">
+<form action="insert_data.php" method="post" enctype="multipart/form-data">
     <table>
         <tbody>
             <tr>
@@ -52,12 +52,16 @@
 </form><br><hr><br>
 <br><br>
     <?php
-        try 
+        $bdd = new PDO("mysql:host=localhost; dbname=school; charset=utf8", "root", "");
+        if ($bdd) 
         {
-            $bdd = new PDO("mysql:host=localhost; dbname=school; charset=utf8", "root", "");
-            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo "Connection Established correctly!!!<br/><br />";
-        
+        }
+        else 
+        {
+            echo "Connection cannot be able to establish.";
+                
+        }
         if(isset($_POST["titre"]) AND isset($_POST["contenu"])) 
         {
             $title = $_POST["titre"];
@@ -78,7 +82,7 @@
         </thead>
         <tbody>
     <?php 
-        $reponse = $bdd->query('SELECT * FROM artcle');           
+        $reponse = $bdd->query('SELECT * FROM article');           
         while ($data = $reponse->fetch()) 
         {
             ?>
@@ -97,12 +101,6 @@
         $bdd=null;
                
         }
-        } 
-        catch (PDOException $e) 
-        {
-            echo "Error : ".$e->getMessage();
-        }
-        
     ?>
 </body>
 </html>
