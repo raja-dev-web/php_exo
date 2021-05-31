@@ -74,8 +74,8 @@
             <table class="table">
                 <thead>
                     <th class="thead">ID</th>
-                    <th class="thead">TITLE_NAME</th>
-                    <th class="thead">CONTENT</th>
+                    <th class="thead">E-MAIL</th>
+                    <th class="thead">PASSWORD</th>
                 </thead>
                 <tbody>
                     <?php 
