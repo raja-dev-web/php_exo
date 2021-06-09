@@ -8,25 +8,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-        div{
-            padding-top: 10px;
-            text-align: center;
-            padding-bottom: 10px;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-<body>
-<?php
-    require "nav.php";
-?>
-    
-<br><hr><br>
-<div>
-    <!-- <h1>Registration Form</h1><br><hr><br> -->
-    <form action="log.php" method="post">
+<form action="log.php" method="post">
     <table>
         <tbody>
             <tr>
@@ -52,7 +37,7 @@
             </tr>
             <tr>
                 <td>
-                    <input type="hidden" id="token" name="token" value="<?php echo $token; ?>"/><br />
+                    <input type="hidden" id="token" name="token" value="dfdfffdfd"/><br />
                 </td>
             </tr>
             <tr>
@@ -62,7 +47,6 @@
             </tr>
         </tbody>
     </table>
-</form>
-</div>
+</form> 
 </body>
 </html>
